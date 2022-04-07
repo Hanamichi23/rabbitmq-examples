@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "6dc0e4e3-0115-4d51-bf13-1e8b286d0529",
+		"name": "Backend I Clase17Ezequiel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Direct Produce",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Message from Direct Exchange\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/producer/direct/:routingKey",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producer",
+						"direct",
+						":routingKey"
+					],
+					"variable": [
+						{
+							"key": "routingKey",
+							"value": "direct1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Topic Produce",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Message from Topic Exchange\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/producer/topic/:topic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producer",
+						"topic",
+						":topic"
+					],
+					"variable": [
+						{
+							"key": "topic",
+							"value": "rabbitmq.spring.hello"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fanout Produce",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"Message from Fanout Exchange\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/producer/fanout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producer",
+						"fanout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
